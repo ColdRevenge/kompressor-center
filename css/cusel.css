@@ -1,0 +1,170 @@
+@charset "utf-8";
+/*
+	styles for select
+*/
+.cusel,
+.cuselFrameRight,
+.jScrollPaneDrag,
+.jScrollArrowUp,
+.jScrollArrowDown {
+	background: url(/images/fronted/selects.png) no-repeat;
+}
+
+.cusel { /* РѕР±С‰РёР№ РІРёРґ СЃРµР»РµРєС‚Р° РІРєР»СЋС‡Р°СЏ СЃС‚СЂРµР»РєСѓ СЃРїСЂР°РІР° */
+	height: 27px;
+	background-position: left top;
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+	font-size: 14px;
+	z-index: 100;
+	
+}
+.cuselFrameRight { /* Р»РµРІР°СЏ С‡СЃС‚СЊ СЃРµР»РµРєС‚. РѕР±С‹РЅРѕ СЃРєСЂСѓРіР»РµРЅРёРµ Рё Р»РµРІР°СЏ РіСЂР°РЅРёС†Р° */
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	right: 0;
+	height: 100%;
+	width: 30px;
+	background-position: right top;
+}
+
+.cuselText { /* РєРѕРЅС‚РµР№РЅРµСЂ РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРЅРѕРіРѕ С‚РµРєСЃС‚Р° СЃРµР»РµРєС‚ */
+	height: 16px;
+	padding: 6px 0 0 7px; /* РїРѕРґР±РёСЂР°РµРј РѕС‚СЃС‚СѓРїС‹ Рё РІС‹СЃРѕС‚Сѓ РґР»СЏ РІРёРґРёРјРѕРіРѕ С‚РµРєСЃС‚Р° РІ СЃРµР»РµРєС‚Рµ */
+	cursor: pointer;
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
+	font: 14px Arial, "Helvetica CY", "Nimbus Sans L", sans-serif; /* С€СЂРёС„С‚С‹ */
+	color:#050f34;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.cusel span { /* РѕС„РѕСЂРјР»РµРЅРёРµ РѕРїС‚РёРѕРЅР° */
+	display: block;
+	cursor: pointer;
+	white-space: nowrap;
+	padding: 2px 15px 2px 5px; /* РїР°РґРґРёРЅРі СЃРїСЂР°РІР° - СЌС‚Рѕ РѕС‚СЃС‚СѓРї С‚РµРєСЃС‚Р° РѕС‚ РїРѕР»Р·СѓРЅРєР° */
+	zoom: 1;
+	font: 14px Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
+	color:#050f34;
+	overflow:hidden
+}
+.cusel span:hover,
+.cusel .cuselOptHover { /* СЂРµР°РєС†РёСЏ РѕРїС‚РёРѕРЅР° РЅР° РЅР°РІРµРґРµРЅРёРµ */
+	background: #102983;
+	color: #fff;
+}
+.cusel .cuselActive { /* РѕС„РѕСЂРјР»РµРЅРёРµ Р°РєС‚РёРІРЅРѕРіРѕ РѕРїС‚РёРѕРЅР° РІ СЃРїРёСЃРєРµ */
+	background: #f9aa04;
+	color: #fff;
+	cursor: default;
+}
+
+/*
+	styles for focus and hover
+*/
+/* .cusel:hover,
+.cusel:hover .cuselFrameRight,
+.cusel:focus,
+.cusel:focus .cuselFrameRight,
+.cuselFocus,
+.cuselFocus .cuselFrameRight {
+	background-image: url(/images/fronted/selects-focus.png);
+}
+
+.cuselOpen {
+	z-index: 999;
+} */
+
+/*
+	styles for disabled select
+*/
+/* .classDisCusel,
+.classDisCusel .cuselFrameRight {
+	background-image: url(/images/fronted/selects-2-dis.png) !important;
+	cursor: default;
+	color: #ccc;
+}
+.classDisCusel .cuselText {
+	cursor: default;
+}
+ */
+
+/*
+	styles for scrollbar
+*/
+.cusel .cusel-scroll-wrap { /* РєРѕРЅС‚РµР№РЅРµСЂ РґР»СЏ Р±Р»РѕРєР° СЃ РїСЂРѕРєСЂСѓС‚РєРѕР№ */
+	display: block;
+	visibility: hidden;
+	position: absolute;
+	left: 0;
+	top: 100%;
+	background: #fff; /* С„РѕРЅ РІС‹РїР°РґР°СЋС‰РµРіРѕ СЃРїРёСЃРєР° */
+	min-width: 100%;
+	width: 255px;
+}
+.cusel .jScrollPaneContainer {
+	position: relative;
+	overflow: hidden;
+	z-index: 5;
+	border: 1px solid #999; /* РіСЂР°РЅРёС†С‹ РІС‹РїР°РґР°СЋС‰РµРіРѕ СЃРїРёcРєР° */
+}
+
+.cusel .jScrollPaneTrack { /* С‚СЂРµРє РґР»СЏ РїРѕР»Р·СѓРЅРєР° РїСЂРѕРєСЂСѓС‚РєРё */
+	height: 100%;
+	width: 7px !important;
+	background: #6077aa;
+	position: absolute;
+	top: 0;
+	right: 4px;
+}
+.cusel .jScrollPaneDrag { /* РїРѕР»Р·СѓРЅРѕРє */
+	position: absolute;
+	background:#102983;
+	cursor: pointer;
+	width: 12px !important;
+	height: 27px !important;
+	right: -4px;
+	border-radius:5px;
+	behavior: url(js/PIE.htc);
+	border:2px solid #6077aa;
+}
+
+.cusel .jScrollPaneDragTop {
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
+.cusel .jScrollPaneDragBottom {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	overflow: hidden;
+}
+.cusel .jScrollArrowUp { /* СЃС‚СЂРµР»РєР° РІРІРµСЂС… */
+	position: absolute;
+	top: 0;
+	right: 2px;
+	width: 26px;
+	height: 12px;
+	cursor: pointer;
+	background-position: -2px -26px;
+	overflow: hidden;
+}
+.cusel .jScrollArrowDown { /* СЃС‚СЂРµР»РєР° РІРЅРёР· */
+	width: 25px;
+	height: 12px;
+	position: absolute;
+	top: auto;
+	bottom: 0;
+	right: 3px;
+	cursor: pointer;
+	background-position: -21px -26px;
+	overflow: hidden;
+}

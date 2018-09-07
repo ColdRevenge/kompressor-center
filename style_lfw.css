@@ -1,0 +1,80 @@
+.scrollable {
+	position:relative;
+	overflow:hidden;
+	width: 960px;
+	height:400px;
+	margin:0px 0px 0;
+	-moz-border-radius:5px;   -webkit-border-radius: 5px;   border-radius:5px;
+}
+
+.scrollable .items {
+	width:20000em;
+	position:absolute;
+	clear:both;
+}
+
+.scrollable .items div.item {
+	float:left;
+	width: 958px;
+	position:relative;
+	height:398px;
+	border:1px solid #cdcdcd;
+	background:#fff;
+	-moz-border-radius:5px;   -webkit-border-radius: 5px;   border-radius:5px;
+}
+
+.scrollable .active {
+	position:relative;
+	cursor:default;
+}
+
+.scrollable {
+    float: left;
+}
+a.browse {
+    background: url("../images/fronted/arrs.png") no-repeat scroll 0 0 transparent;
+    cursor: pointer;
+    display: block;
+    position:absolute; z-index:10;
+    font-size: 1px;
+    height: 44px;
+    margin: 0px 0px 0;
+    width: 32px;
+	top:179px;
+}
+a.right {  right:-30px;  background: url("../images/fronted/arrs.png") no-repeat scroll right -44px transparent;    clear: right;    margin-right: 0;}
+a.right:hover {    background: url("../images/fronted/arrs.png") no-repeat scroll right bottom transparent;    clear: right;    margin-right: 0;}
+a.right.disabled {    background: url("../images/fronted/arrs.png") no-repeat scroll right 0 transparent;  opacity:0.4;}
+
+a.left {  left:-30px;  background: url("../images/fronted/arrs.png") no-repeat scroll 0 -44px transparent;}
+a.left:hover {    background: url("../images/fronted/arrs.png") no-repeat scroll 0 bottom transparent;}
+a.left.disabled {    background: url("../images/fronted/arrs.png") no-repeat scroll 0 0 transparent;  opacity:0.4;}
+
+a.up, a.down {
+    background: url("../img/scrollable/arrow/vert_large.png") no-repeat scroll 0 0 transparent;
+    float: none;
+    margin: 10px 50px;
+}
+a.up:hover {
+    background-position: -30px 0;
+}
+a.up:active {
+    background-position: -60px 0;
+}
+a.down {
+    background-position: 0 -30px;
+}
+a.down:hover {
+    background-position: -30px -30px;
+}
+a.down:active {
+    background-position: -60px -30px;
+}
+a.disabled {
+cursor:default;
+}
+
+
+.navi  {position:absolute; z-index:10; top:10px; right:19px; height:12px; margin:0 auto;}
+.navi a {display:block; float:left; cursor:pointer; height:18px; width:18px; margin-left:2px; background:url(../images/fronted/navi.png) no-repeat left;}
+.navi a.active { background:url(../images/fronted/navi.png) no-repeat right; }

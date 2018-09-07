@@ -1,0 +1,83 @@
+
+#modal div.text {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+body#modal {
+    background: none white;
+    background-image: none;
+    min-width: 0;
+    min-height: 0;
+}
+
+#modal form {
+    margin-top: 10px;
+}
+
+#modal h1, #modal .h1, #modal h2, #modal .h2 {
+    margin-top: 0;
+}
+
+#modal .senders p {
+    font-size: 13px;
+}
+#modal .senders    {
+    width: 375px;
+    text-align: center;
+}
+
+#modal .senders input    {
+    width: 350px;
+    padding: 5px 10px;
+    font: 14px 'Open Sans';
+    color: #000;
+    margin-bottom: 5px;
+}
+
+#modal .senders textarea    {
+    width: 356px;
+    height: 150px;
+    margin-bottom: 5px;
+}
+
+#modal .senders .input_text_captcha    {
+    width: 278px;
+    padding: 10px 20px;
+    font: 17px 'Open Sans';
+    color: #000;
+    border-radius: 2px;
+    border: 1px solid #ccc;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+#modal .senders .button-captcha img {
+    border: 1px solid #ccc;
+    height: 45px;
+    vertical-align: top;
+    border-radius: 2px;
+    cursor: pointer;
+    margin-right: 1px;
+}
+
+#modal .senders .senders-button    {
+    text-align: right;
+}
+
+#modal .senders-info-block  {
+    font: 24px 'Open Sans';
+    text-align: center;
+}
+
+#modal .senders-info-block>span {
+    font: 18px 'Open Sans';
+    display: block;
+    margin-top: 10px;
+}
+
+#modal .senders .send    {
+    display: inline;
+    margin: auto;
+}

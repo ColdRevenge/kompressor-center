@@ -1,0 +1,90 @@
+/* ------ general
+-----------------------------------------------*/
+
+
+/* ------ mobilyslider
+-----------------------------------------------*/
+
+
+.slider {
+float:left;
+width:740px;
+height:261px;
+position:relative;
+padding-bottom:26px;
+}
+
+.sliderContent {
+float:left;
+width:740px;
+height:261px;
+clear:both;
+position:relative;
+overflow:hidden;
+}
+
+.sliderArrows a {
+display:block;
+text-indent:-9999px;
+outline:none;
+z-index:50;
+background-image:url(/js/mobilyslider/gfx/prev_next.png);
+width:42px;
+height:43px;
+position:absolute;
+top:50%;
+margin-top:-34px;
+}
+
+.prev {
+background-position:0 0;
+left:15px;
+}
+
+.prev:hover {
+background-position:0 -44px;
+}
+
+.next {
+right:15px;
+background-position:-44px 0;
+}
+
+.next:hover {
+background-position:-44px -44px;
+}
+
+.sliderContent .item {
+position:absolute;
+width:740px;
+height:261px;
+background:#fff;
+}
+
+.sliderBullets {
+position:absolute;
+bottom:0;
+right:15px;
+top: 240px;
+z-index:50;
+margin-left:-45px;
+}
+
+.sliderBullets a {
+display:block;
+float:left;
+text-indent:-9999px;
+outline:none;
+margin-left:5px;
+width:10px;
+height:11px;
+background:url(/js/mobilyslider/gfx/bullets.png) no-repeat;
+}
+
+.sliderBullets .active {
+background-position:0 -11px;
+}
+
+.sliderContent a {
+outline:none;
+}

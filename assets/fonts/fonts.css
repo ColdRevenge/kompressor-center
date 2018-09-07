@@ -1,0 +1,68 @@
+@font-face {
+    font-family: "OpenSans";
+    src: url("OpenSans/OpenSansRegular/OpenSansRegular.eot");
+    src: url("OpenSans/OpenSansRegular/OpenSansRegular.eot?#iefix")format("embedded-opentype"),
+    url("OpenSans/OpenSansRegular/OpenSansRegular.woff") format("woff"),
+    url("OpenSans/OpenSansRegular/OpenSansRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "OpenSans";
+    src: url("OpenSans/OpenSansLight/OpenSansLight.eot");
+    src: url("OpenSans/OpenSansLight/OpenSansLight.eot?#iefix")format("embedded-opentype"),
+    url("OpenSans/OpenSansLight/OpenSansLight.woff") format("woff"),
+    url("OpenSans/OpenSansLight/OpenSansLight.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "OpenSans";
+    src: url("OpenSans/OpenSansItalic/OpenSansItalic.eot");
+    src: url("OpenSans/OpenSansItalic/OpenSansItalic.eot?#iefix")format("embedded-opentype"),
+    url("OpenSans/OpenSansItalic/OpenSansItalic.woff") format("woff"),
+    url("OpenSans/OpenSansItalic/OpenSansItalic.ttf") format("truetype");
+    font-style: italic;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "OpenSans";
+    src: url("OpenSans/OpenSansBold/OpenSansBold.eot");
+    src: url("OpenSans/OpenSansBold/OpenSansBold.eot?#iefix")format("embedded-opentype"),
+    url("OpenSans/OpenSansBold/OpenSansBold.woff") format("woff"),
+    url("OpenSans/OpenSansBold/OpenSansBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "OpenSans";
+    src: url("OpenSans/OpenSansBoldItalic/OpenSansBoldItalic.eot");
+    src: url("OpenSans/OpenSansBoldItalic/OpenSansBoldItalic.eot?#iefix")format("embedded-opentype"),
+    url("OpenSans/OpenSansBoldItalic/OpenSansBoldItalic.woff") format("woff"),
+    url("OpenSans/OpenSansBoldItalic/OpenSansBoldItalic.ttf") format("truetype");
+    font-style: italic;
+    font-weight: 600;
+}
+@font-face {
+    font-family: "OpenSans";
+    src: url("OpenSans/OpenSansSemiBold/OpenSansSemiBold.eot");
+    src: url("OpenSans/OpenSansSemiBold/OpenSansSemiBold.eot?#iefix")format("embedded-opentype"),
+    url("OpenSans/OpenSansSemiBold/OpenSansSemiBold.woff") format("woff"),
+    url("OpenSans/OpenSansSemiBold/OpenSansSemiBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "OpenSans";
+    src: url("OpenSans/OpenSansSemiBoldItalic/OpenSansSemiBoldItalic.eot");
+    src: url("OpenSans/OpenSansSemiBoldItalic/OpenSansSemiBoldItalic.eot?#iefix")format("embedded-opentype"),
+    url("OpenSans/OpenSansSemiBoldItalic/OpenSansSemiBoldItalic.woff") format("woff"),
+    url("OpenSans/OpenSansSemiBoldItalic/OpenSansSemiBoldItalic.ttf") format("truetype");
+    font-style: italic;
+    font-weight: 500;
+}

@@ -1,0 +1,21 @@
+User-Agent: *
+Disallow: /index.php
+Disallow: /auth/recovery/*
+Disallow: /auth/register/*
+Disallow: /add/info/*
+Disallow: /catalog/all/
+Disallow: */article/*
+Disallow: */name/*
+Disallow: */price/*
+Disallow: */0/*
+Disallow: /news/all/*
+Disallow: /products$
+Disallow: /basket/*
+Disallow: /catalog/find/*
+Disallow: */?is_modal=1
+Disallow: /page//
+Disallow: /products/-2/
+Disallow: /page/jenskiiy-trikotaj/
+
+Host: kompressor-center.com
+Sitemap: http://kompressor-center.com/sitemap.xml

@@ -1,0 +1,1305 @@
+
+@charset "utf-8";
+* {
+    outline: none;
+}
+body {
+    margin: 0px;
+    padding: 0px;
+    background: url(/images/sys/admin/bg.jpg) center top no-repeat white;
+    background-size: auto;
+    font: 14px Arial,Helvetica,sans-serif;;
+    color: black;
+    min-height: 100%;
+    min-width: 1240px;
+
+
+}
+
+table[border="1"] {
+    padding: 0;
+    margin: 0;
+    border-collapse: collapse;
+}
+table[border="1"] tr td {
+    padding: 5px 5px;
+    border: 1px solid #E6E6E6;
+}
+.hand {
+    cursor: pointer
+}
+button, .block a.button {
+    background-color: transparent;
+    border: 0px;
+    margin: 0px;
+    padding: 7px 17px 7px 17px;
+    display: inline-block;
+    line-height: 1;
+    cursor: pointer; 
+    text-transform: uppercase;
+    font: 14px Arial,Helvetica,sans-serif;;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAAeCAIAAACJwFiTAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NTc3MiwgMjAxNC8wMS8xMy0xOTo0NDowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjQ3RDQyMzY2QUJCRDExRTRBMDE0QTk1ODQ2NUZDRkE0IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjQ3RDQyMzY3QUJCRDExRTRBMDE0QTk1ODQ2NUZDRkE0Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NDdENDIzNjRBQkJEMTFFNEEwMTRBOTU4NDY1RkNGQTQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NDdENDIzNjVBQkJEMTFFNEEwMTRBOTU4NDY1RkNGQTQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz46PJdiAAAAKElEQVR42mJkmPWKgYGBheH/fzDFAKFAJEIQTY4qFANVtTMgBAECDADsNTTHJUAePQAAAABJRU5ErkJggg==") repeat-x 0 0 #0082cf;
+    color: white;
+}
+button:hover, .block  a.button:hover {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAAeCAIAAACJwFiTAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NTc3MiwgMjAxNC8wMS8xMy0xOTo0NDowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjRCOUMwRjAyQUJCRDExRTQ5MzMxOEY4NEE4RDg4RjZDIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjRCOUMwRjAzQUJCRDExRTQ5MzMxOEY4NEE4RDg4RjZDIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NEI5QzBGMDBBQkJEMTFFNDkzMzE4Rjg0QThEODhGNkMiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NEI5QzBGMDFBQkJEMTFFNDkzMzE4Rjg0QThEODhGNkMiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6XhtAbAAAANElEQVR42mJkmv2KgYGBheE/A5gC00wMDAy4BBFyhASJUAIXBNuAah+Uh08JqjuhPIAAAwCOZBXPNhzy3AAAAABJRU5ErkJggg==);
+}
+button:active, .block  a.button:active {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAAeCAIAAACJwFiTAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NTc3MiwgMjAxNC8wMS8xMy0xOTo0NDowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjRGRjlBRDIwQUJCRDExRTQ5MUU1ODVGQUM3OUE2MzZCIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjRGRjlBRDIxQUJCRDExRTQ5MUU1ODVGQUM3OUE2MzZCIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NEZGOUFEMUVBQkJEMTFFNDkxRTU4NUZBQzc5QTYzNkIiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NEZGOUFEMUZBQkJEMTFFNDkxRTU4NUZBQzc5QTYzNkIiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz43vboDAAAAQklEQVR42pTMywkAIAwD0FRbR3U4d6wfagUFPXh6kIQQcgHAYJkkQw48jLwvQ5xhMMihC6B39806g9EcNbQOugADAH/pBulYFpT2AAAAAElFTkSuQmCC);
+}
+#uploader_images {
+    min-height: 200px;
+    margin-top: 20px;
+}
+.up-img {
+    border: 1px solid #E6E6E6;
+    width: 100px;
+    height: 100px;
+    float: left;
+    padding: 1px;
+    font-size: 12px;
+    margin: 1px;
+    position: relative;
+    text-align: center;
+}
+.up-img:hover .up-nav, .up-img:hover  .up-del {
+    opacity: 1;
+}
+.up-nav  {
+    -webkit-transition: .5s opacity;
+    -moz-transition: .5s opacity;
+    -ms-transition: .5s opacity;
+    -o-transition: .5s opacity;
+    transition: .5s opacity;
+    opacity: 0;
+    position: absolute;
+    width: 100px;
+    height: 20px;
+    padding-top: 5px;
+    background: url(/images/sys/up_bg.png) left top repeat;
+    font-weight: bold;
+    float: right;
+    font-family: Arial, Helvetica, Arial, sans-serif;
+    top: 77px; 
+    left: 0;
+}
+.up-nav img:hover {
+    opacity:0.75;
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=75);
+}
+.up-back {
+    z-index: 10;
+    float: left;
+    margin-left: 10px;
+    position: relative;
+}
+.up-next {
+    z-index: 10;
+    float: right;
+    position: relative;
+    margin-right: 10px;
+}
+.up-action {
+    width: 100px;
+    z-index: 1;
+    position: absolute;
+    text-align: center;
+}
+.up-del {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    -webkit-transition: .5s opacity;
+    -moz-transition: .5s opacity;
+    -ms-transition: .5s opacity;
+    -o-transition: .5s opacity;
+    transition: .5s opacity;
+    opacity: 0;
+    top: 3px; 
+    right: 5px;
+}
+a {
+    outline: none;
+}
+label.error {
+    color: #FB5657;
+    font-size: 13px;
+    display: block;
+    font-family: Arial, Verdana, Geneva, sans-serif;
+}
+body input.error {
+    border: 1px solid #FB5657;
+}
+img {
+    border: 0px;
+}
+h1 {
+    color: #202020;
+    padding: 0px;
+    margin: 0px 0px 9px 0px;
+    font: 23px Arial,Helvetica,sans-serif;;
+}
+h5 {
+    color: black;
+    padding: 0px;
+    margin: 2px 0px;
+    font: 16px Arial,Helvetica,sans-serif;;
+}
+h2 {
+
+    margin: 5px 0px;
+    padding: 0px;
+    font: 21px Arial,Helvetica,sans-serif;;
+    color: #4095DC;
+}
+
+h3 {
+
+    margin: 5px 0px;
+    padding: 0px;
+    font: 17px Arial,Helvetica,sans-serif;;
+    color: #2884cb;
+}
+.rigth-block {
+    float: right;
+    margin-right: 30px;
+    margin-top: 9px;
+    font-size: 13px;
+    text-align: right;
+    line-height: 1.5;
+    color: white;
+}
+.rigth-block a {
+    color: #fcff00;
+    text-decoration: none;
+    font-weight: bold;
+}
+.rigth-block a:hover {
+    text-decoration: underline;
+}
+#header {
+    width: 100%;
+    background: url(/images/sys/menu_line.png) left bottom repeat-x;
+}
+#breadcrumbs {
+    font: 11px Arial,Helvetica,sans-serif;;
+    margin-bottom: 4px;
+    position: relative;
+    margin-top: -10px;
+}
+
+#breadcrumbs a, #breadcrumbs span {
+    vertical-align: middle;
+}
+input, select, textarea {
+    vertical-align: middle;
+}
+#header #menu {
+    position: relative;
+    z-index: 98;
+    text-align: center;
+}
+#header #menu>div>ul {
+    display: none;
+}
+#header #menu>div:hover>ul {
+    display: block;
+}
+#header #logo {
+    height: 55px;
+}
+.logo {
+    height: 40px;
+    float: left;
+    padding: 7px 0 0 30px;
+}
+#header #logo .logo a {
+    font-size: 35px;
+    color: white;
+    text-decoration: none;
+    text-shadow:  rgb(255, 255, 255) -5px -1px 23px;
+}
+#header #logo .logo a:hover {
+    color: #fcff00;
+    text-shadow:  #fcff00 -5px -1px 23px;
+}
+
+#header #menu div {
+    display:-moz-inline-stack;/*Firefox 2*/
+    display:inline-block; /*Хорошие браузеры*/
+    _overflow:hidden;/*IE6, IE7*/
+    *zoom:1;/*включаем hasLayout для IE6, IE7*/
+    *display:inline;/*при hasLayout true display:inline в IE6, IE7 ведёт себя как display:inline-block*/
+}
+#header #menu div>a>span {
+    display: inline-block;
+    padding: 13px 17px 12px 40px;
+}
+#header #menu {
+    /*border-top: 1px solid black;*/
+    background: url(/images/sys/admin/menu.png) left bottom repeat-x;
+    /*background: url(/images/sys/menu.png) left bottom repeat-x;*/
+}
+#header #menu div:first-child a {
+    border-left: 0;
+}
+#header #menu div:last-child a{
+    border-right: 0;
+}
+#header #menu div>a {
+    display:-moz-inline-stack;/*Firefox 2*/
+    display:inline-block; /*Хорошие браузеры*/
+    _overflow:hidden;/*IE6, IE7*/
+    *zoom:1;/*включаем hasLayout для IE6, IE7*/
+    *display:inline;/*при hasLayout true display:inline в IE6, IE7 ведёт себя как display:inline-block*/
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    border-right: 1px solid #b5b5b5;
+    border-left: 1px solid #ebebeb;
+    font: 14px Arial,Helvetica,sans-serif;
+}
+
+
+#header #menu div:hover>a, #header #menu>a.selected {
+    border-left-color: transparent;
+    display:-moz-inline-stack;/*Firefox 2*/
+    display:inline-block; /*Хорошие браузеры*/
+    _overflow:hidden;/*IE6, IE7*/
+    *zoom:1;/*включаем hasLayout для IE6, IE7*/
+    *display:inline;/*при hasLayout true display:inline в IE6, IE7 ведёт себя как display:inline-block*/
+    /*background: url(/images/sys/menu_s.png) left bottom repeat-x;*/
+    background-color: #2884cb;
+    /*color: white;*/
+    background: url(/images/sys/admin/menu-top-s.png) left bottom repeat-x;
+
+}
+
+#header #menu span.selected {
+    cursor: default;
+    display:-moz-inline-stack;/*Firefox 2*/
+    display:inline-block; /*Хорошие браузеры*/
+    _overflow:hidden;/*IE6, IE7*/
+    *zoom:1;/*включаем hasLayout для IE6, IE7*/
+    *display:inline;/*при hasLayout true display:inline в IE6, IE7 ведёт себя как display:inline-block*/
+    background: url(/images/sys/menu_s.png) left bottom repeat-x;
+    color: white;
+    margin:0px;
+    font: 14px Arial,Helvetica,sans-serif;
+}
+
+#header #menu .category-icon {
+    background: url(/images/sys/admin/icon_menu.png) 13px 13px no-repeat;
+    display: block;
+}
+#header #menu .products-icon {
+    background: url(/images/sys/admin/icon-catalog.png) 13px 13px no-repeat;
+}
+#header #menu .page-icon {
+    background: url(/images/sys/admin/icon-page.png) 13px 13px no-repeat;
+}
+#header #menu .news-icon {
+    background: url(/images/sys/admin/icon-news.png) 13px 13px no-repeat;
+}
+#header #menu .order-icon {
+    background: url(/images/sys/admin/icon-order.png) 12px 13px no-repeat;
+    padding-left: 37px;
+}
+#header #menu .marketing-icon {
+    background: url(/images/sys/admin/icon-marketing.png) 13px 13px no-repeat;
+}
+#header #menu .setting-icon {
+    background: url(/images/sys/admin/icon-setting.png) 13px 13px no-repeat;
+}
+
+
+#header #menu div ul {
+    position: absolute;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;  
+    display: none;
+    text-align: left;
+}
+#header #menu div>ul a, #header #menu div>ul span {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    width: 100%;;
+    font: 14px Arial,Helvetica,sans-serif;
+    height: auto;
+    background: none;
+    padding: 8px 10px 8px 25px;
+    margin: 0px;
+    background: url(/images/sys/admin/arrow.png) 15px 14px no-repeat #E9E9E9;
+    border: 1px solid #d5d5d5;
+    border-top: 1px solid #f1f1f1;
+    border-bottom: 1px solid #d5d5d5;
+
+    text-transform: initial;
+}
+#header #menu div>ul li:last-child a, #header #menu div>ul li:last-child span {
+    box-shadow: 0px 7px 28px -11px #000000;
+}
+#header #menu div ul a:hover, #header #menu div ul span {
+    height: auto;
+    margin: 0px;
+    background-color: #f3f3f3;
+}
+#header #menu div ul>span {
+    display: inline-block;
+    color: white;
+    cursor: default;
+}
+
+#header #menu div>ul li {
+    margin: 0px;
+    padding: 0px;
+}
+#header #menu div>ul ul li a{
+    display: inline-block;
+    padding: 12px 10px;
+}
+
+
+.block {
+    min-width: 500px;
+}
+.block .menu, .block  .menu-list  {
+    line-height: 1.5em;
+    display:table-cell;/*при hasLayout true display:inline в IE6, IE7 ведёт себя как display:inline-block*/
+    width: 180px;
+    padding-right: 20px;
+    vertical-align: top;
+}
+.block .menu-list a {
+    font-size: 14px;
+}
+.block .menu-list ul {
+    margin: 0px;
+    width: 180px;
+    padding: 0px;
+    list-style: none;
+}
+
+.block .menu-list ul li {
+    margin-left: 5px;
+    padding-left: 15px;
+}
+.plus {
+
+    background: url(/images/sys/plus.gif) left top no-repeat;
+}
+.minus {
+
+    background: url(/images/sys/minus.gif) left top no-repeat;
+}
+.block .menu-list .selected_menu {
+    font-weight: bold;
+}
+
+.block .page {
+    width: 100%;
+    display:table-cell;/*при hasLayout true display:inline в IE6, IE7 ведёт себя как display:inline-block*/
+    min-width: 900px;
+    _overflow:hidden;/*IE6, IE7*/
+    *zoom:1;/*включаем hasLayout для IE6, IE7*/
+    *display:inline;/*при hasLayout true display:inline в IE6, IE7 ведёт себя как display:inline-block*/
+}
+
+
+.block p {
+    padding: 4px 0px;
+    margin: 0px;
+}
+.block .menu .header {
+    background-color: #2884cb;
+    padding: 9px 0;
+    position: relative;
+    display: block;
+    width: 192px;
+    margin-left: -10px;
+    color: white;
+    text-transform: uppercase;
+    padding-left: 20px;
+    font-size: 16px;
+}
+.block .menu ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none none inside;
+}
+.block .menu ul li:first-child a, .block .menu ul li:first-child span {
+    border-top: 1px solid #e5e5e5;
+}
+.block .menu ul li a, .block .menu ul li span {
+    border: 1px solid #e5e5e5;
+    border-top: 0;
+}
+.block .menu ul li {
+    margin: 0px;
+    border: 0;
+    padding: 0px;
+    list-style: none none inside;
+    background: url(/images/sys/admin/menu-bg-li.png) 0 0 repeat-x white;
+}
+.block .menu ul li:hover, .block .menu ul li.active {
+    background-image: none;
+    background-color: #2884cb;
+}
+.block .menu ul li a, .block .menu ul li.active span  {
+    display: block;
+    min-width: 180px;
+    font: 15px Arial,Helvetica,sans-serif;
+    color: black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    text-decoration: none;
+    text-align: left;
+    background: url(/images/sys/admin/menu-li.png) 12px 14px no-repeat;
+}
+.block .menu ul li a:hover, .block .menu ul li.active span  {
+    color: white;
+    background: url(/images/sys/admin/menu-li-s.png) 12px 14px no-repeat;
+}
+
+
+.clear {
+    clear: both;
+    font-size: 0px;
+    width: 0px;
+    height: 0px;
+}
+#company {
+    overflow: hidden;
+    height: 114px;
+    width:96%;
+    display:-moz-inline-stack;/*Firefox 2*/
+    display:inline-block; /*Хорошие браузеры*/
+    _overflow:hidden;/*IE6, IE7*/
+    *zoom:1;/*включаем hasLayout для IE6, IE7*/
+    *display:inline;/*при hasLayout true display:inline в IE6, IE7 ведёт себя как display:inline-block*/
+    margin-top: 7px;
+    vertical-align: top;
+}
+.block .arrow {
+    display:-moz-inline-stack;/*Firefox 2*/
+    display:inline-block; /*Хорошие браузеры*/
+    _overflow:hidden;/*IE6, IE7*/
+    *zoom:1;/*включаем hasLayout для IE6, IE7*/
+    *display:inline;/*при hasLayout true display:inline в IE6, IE7 ведёт себя как display:inline-block*/
+    padding-top: 45px;
+}
+.block .arrow img {
+    cursor: pointer;
+}
+#company div {
+    width: 1500px;
+}
+#company img {
+    margin: 0px 1px;
+    border: 1px solid #ded9ce;
+}
+
+#content {
+    background-color: #eaf2f9;
+    min-height: 400px;
+    width: 100%;
+    padding-top: 16px;
+    padding-bottom: 2px;
+    text-align: justify;
+}
+
+
+.block {
+    border: 1px solid #ded9ce;
+    background-color: white;
+    min-height: 350px;
+    clear: both;
+    padding: 16px;
+    margin: 0px 16px 16px 16px;
+}
+
+.main_block {
+    display:-moz-inline-stack;/*Firefox 2*/
+    display:inline-block; /*Хорошие браузеры*/
+    _overflow:hidden;/*IE6, IE7*/
+    *zoom:1;/*включаем hasLayout для IE6, IE7*/
+    *display:inline;/*при hasLayout true display:inline в IE6, IE7 ведёт себя как display:inline-block*/
+    width: 24%;
+    text-align: center;
+    vertical-align: top;
+    background: url(/images/sys/main_border.png) right bottom no-repeat;
+}
+.main_block div {
+    margin-top: 5px;
+    display:-moz-inline-stack;/*Firefox 2*/
+    display:inline-block; /*Хорошие браузеры*/
+    _overflow:hidden;/*IE6, IE7*/
+    *zoom:1;/*включаем hasLayout для IE6, IE7*/
+    *display:inline;/*при hasLayout true display:inline в IE6, IE7 ведёт себя как display:inline-block*/
+    padding: 0px 40px 0px 10px;
+    text-align: justify;
+}
+
+#footer {
+    width: 100%;
+    height: 0px;
+    color: white;
+}
+
+div.line {
+    background-color: #4095DC;
+    height: 6px;
+    width: 100%;
+    font: 12px Arial,Helvetica,sans-serif;
+}
+
+
+.block a, .block-page a, h1+a {
+    color: #2884cb;
+    text-decoration: none;
+}
+.block a:hover, .block-page a:hover, h1+a:hover {
+    text-decoration: underline;
+}
+
+.article ul span {
+    color: #4b4b4b;
+}
+
+.map {
+    float: left;
+    margin-right: 15px;
+}
+
+.desc_map {
+    float: left;
+    width:410px;
+}
+
+.price {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0px 0px 20px 0px;
+    width: 470px;
+
+    text-align: left;
+}
+
+.price img {
+    float: left;
+    margin-right: 20px;
+}
+.price div {
+    float: left;
+}
+.price ul {
+    margin: 0px;
+    padding: 0px;
+}
+.price ul li {
+    margin: 0px 20px;
+    padding: 4px 0px;
+    font-size: 13px;
+    list-style: none url(/images/sys/arrow-price.png) inside;
+}
+
+.price ul li span {
+    color: #4294d8;
+    font:  15px Arial,Helvetica,sans-serif;
+}
+
+#post {
+    margin: 20px 0px;
+    padding-right: 20px;
+}
+.info {
+    margin-left: 380px;
+    padding-top: 20px;
+    position: absolute;
+    text-align: left;
+    font: 14px Arial,Helvetica,sans-serif;;
+    line-height: 1.5;
+
+    float: left;
+    color: white;
+}
+
+
+
+
+
+
+.hide {
+    display: none;
+}
+
+input, label {
+    vertical-align: middle;
+    outline: none;
+    outline:expression(hideFocus='true');
+}
+input[type="text"], input[type="password"], textarea, select {
+    border: 1px solid #CCCCCC;
+    outline: none;
+    color: #333333;
+    padding: 7px 7px;
+    font: 14px Arial,Helvetica,sans-serif;;
+    width: 240px;
+}
+
+input[type="text"]:hover, input[type="password"]:hover, textarea:hover, select:hover {
+    border: 1px solid #70aed4;
+    background-color: #f3f7fa;
+}
+
+
+textarea {
+    height: 100px;
+}
+
+
+
+
+
+
+select option {
+    padding: 1px 0px;
+
+    vertical-align: middle;
+}
+
+.desc_map  h2 {
+    font-size: 14px;
+}
+
+
+.portfolio_site {
+    margin-top: 10px;
+    vertical-align: middle;
+    margin-bottom: 5px;
+    display:-moz-inline-stack;/*Firefox 2*/
+    display:inline-block; /*Хорошие браузеры*/
+    _overflow:hidden;/*IE6, IE7*/
+    *zoom:1;/*включаем hasLayout для IE6, IE7*/
+    *display:inline;/*при hasLayout true display:inline в IE6, IE7 ведёт себя как display:inline-block*/
+    text-align: center;
+}
+.portfolio_site a, .portfolio_site span {
+    color: #4294d8;
+    margin-bottom: 4px;
+    font: 16px Arial,Helvetica,sans-serif;;
+}
+.portfolio_site img {
+    margin: 3px 5px;
+    border: 1px solid #ded9ce;
+}
+
+.buy {
+    float: right;
+    text-align: center;
+    margin: 0px 0px 20px 30px;
+}
+.buy div {
+    color: #4095DC;
+    font: 22px Tahoma,Helvetica,sans-serif;;
+}
+
+.buy  a {
+    background: url(/images/sys/order_s.png) center center no-repeat;
+    width: 152px;
+    height: 88px;
+    display: block;
+    text-decoration: none;
+}
+.buy  a:hover {
+    background: url(/images/sys/order.png) center center no-repeat;
+    width: 152px;
+    height: 88px;
+    text-decoration: none;
+}
+
+.date {
+    color: #4095DC;
+
+}
+
+.news_border {
+    margin-bottom: 5px;
+}
+
+.submit {
+    width: 97px;
+    height: 32px;
+    padding: 0px;
+    margin: 0px;
+    outline: none;
+    font: 14px Arial,Helvetica,sans-serif;;
+    color: #4b4b4b;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -khtml-border-radius: 0px;
+    border-radius: 0px;
+    border: 0px;
+}
+
+
+
+/* Таблицы, вывод инфы */
+.table, .table_blue {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    border-collapse: collapse;
+}
+.table_blue td {
+    border:2px solid white;
+}
+.table thead, .table_blue thead {
+    background-color: #2884cb;
+}
+
+.table thead td span, .table_blue thead td span {
+    font-size: 12px;
+    color: #D6EAFA;
+}
+
+.table thead td, .table_blue thead td {
+    padding: 10px;
+    color: white;
+    font-size: 16px;
+}
+.table thead td a, .table_blue thead td a {
+    color: white;
+    text-decoration: none;
+}
+.table thead td a:hover, .table_blue thead td a:hover {
+    color: #ffff00;
+    text-decoration: underline;
+}
+.table_blue tbody:nth-child(2n-1) {
+    background-color: #D6EAFA;
+}
+.table_blue tbody:nth-child(2n)  {
+    background-color: #E5F1FB;
+}
+
+.table_blue tbody:hover {
+    background-color: #c2e4ff;
+}
+.table tfoot, .table_blue tfoot {
+    padding-right: 0;
+    background-color: white;
+}
+.table thead td {
+    border:1px solid #e5e5e5;
+}
+.table tbody td {
+    border:1px solid #e5e5e5;
+    padding: 5px 10px;
+}
+body .table tfoot:last-child td {
+    border-top:1px solid red;
+}
+.table tbody:nth-child(2n-1) {
+    background-color: #F5F5F5;
+}
+.table tbody:nth-child(2n)  {
+    background-color: #FFFFFF;
+}
+.table tbody:hover {
+    background-color: #eae9e9;
+}
+.notice {
+    font-size: 12px;
+    color: gray;
+}
+table thead  .notice {
+    color: white;
+}
+.table thead td a+img {
+    margin-left: 7px;
+}
+
+.minumizeMenu {
+    width: 10px;
+    text-align: center;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+
+.quick_actions {
+    float: right;
+    margin-bottom: 3px;
+    font: 17px Arial,Helvetica,sans-serif;;
+}
+.quick_actions img {
+    vertical-align: middle;
+    margin-right: 4px;
+}
+.checkbox {
+    vertical-align: middle;
+    margin-right: 5px
+}
+
+.img {
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+.img:hover {
+    border: 1px solid red;
+}
+
+.quick_add {
+    display: inline-block;
+    background-color: white;
+    padding: 10px;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #A2D4FD;
+}
+
+.quick_add h1 {
+    color: black;
+    padding: 0px;
+    margin: 6px 0px 4px 0px;
+    font: 16px Arial,Helvetica,sans-serif;;
+    text-align: left;
+}
+.quick_add .text {
+    width: 220px;
+    vertical-align: middle;
+}
+
+
+.messages, #message {
+    color: #50A6ED;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid #50A6ED;
+    padding: 9px;
+    text-align: center;
+    margin: 8px auto 28px auto;
+    width: 500px;
+}
+div.error {
+    color: red;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid red;
+    padding: 9px;
+    text-align: center;
+    margin: 8px auto 28px auto;
+    width: 500px;
+}
+
+
+.stat_date {
+    text-align: center;
+}
+.stat_date select {
+    width: 50px;;
+}
+
+
+.asterix {
+    color: #FB5657;
+    font-size: 100%;
+    font-family:Verdana, Geneva, sans-serif;
+}
+
+#auth {
+    display: block;
+    margin: 17% auto;
+    width: 440px;
+}
+#auth h1 {
+    margin-top: 0px;
+    font-size: 18px;
+    text-transform: uppercase;
+    display: block;
+    text-align: center;
+}
+#auth table {
+    background-color: #F1F1F1;
+    /*border: 1px solid #CCCCCC;*/
+    padding: 35px 50px;
+    border-bottom: 2px solid #2884cb;
+}
+#auth table input, #auth table button {
+    margin:3px 0;
+}
+#auth table input {
+    padding: 8px 7px;
+}
+.cms_left img {
+    float: left;
+    vertical-align: top;
+    margin-right: 10px;
+}
+
+.cms_left h1 {
+    vertical-align: top;
+    display: block;
+    padding-top: 11px;
+    text-align: center;
+
+    color: #4095DC;
+    padding: 0px;
+    padding-top: 12px;
+    margin: 0px 0px 20px 0px;
+    font: 17px Arial,Helvetica,sans-serif;;
+}
+
+
+
+
+.product {
+    text-align: center;
+    margin: 10px;
+    margin-top: 20px;
+    text-align: center;
+    width: 157px;
+    font:  14px Tahoma, sans-serif;
+    display:-moz-inline-stack;
+    display:inline-block;
+    _overflow:hidden;
+    *zoom:1;
+    *display:inline;
+}
+.product img:hover {
+    opacity:0.75;
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=75);
+}
+
+#top-page_info {
+    margin: 0px 0px 10px 0px;
+    color: gray;
+    font-size: 14px;
+    float: right;
+}
+.selected_list_page {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#ajax_loading_indicator_box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0.8;
+}
+#ajax_loading_indicator {
+    display: block;
+    margin: 120px auto;
+}
+
+
+
+
+
+
+
+
+/* На удаление */
+
+
+
+/*
+Вверх
+*/
+
+#alx_up_page_button {
+    width: 35px;
+
+    height: 19px;
+    background:url(/images/fronted/up-arrow.png) no-repeat !important;
+    z-index: 2000;
+    bottom:150px !important;
+}
+#alx_up_page_button:hover {
+    background-position:0 -33px !important; 
+}
+#alx_up_page_button:active {
+    background-position:0 -63px !important; 
+}
+#alx_up_page_button img {
+    display:none;
+} 
+
+#alx_up_page_button
+{
+    padding: 0px;
+    margin: 0px;
+    position:fixed;
+    display:none;
+    -moz-opacity: 0.8;
+    -khtml-opacity: 0.8;
+    opacity: 0.8;
+    zoom:1;
+    cursor:pointer;
+    z-index: 2000;
+}
+*html #alx_up_page_button
+{
+    position:absolute !important;
+}
+
+.container { width: 800px; margin: 0 auto; }
+
+.autocomplete-suggestions { border: 1px solid #999; background: #FFF; cursor: default; overflow: auto; -webkit-box-shadow: 1px 4px 3px rgba(50, 50, 50, 0.64); -moz-box-shadow: 1px 4px 3px rgba(50, 50, 50, 0.64); box-shadow: 1px 4px 3px rgba(50, 50, 50, 0.64); }
+.autocomplete-suggestion { padding: 2px 5px; white-space: nowrap; overflow: hidden; }
+.autocomplete-selected { background: #F0F0F0; }
+.autocomplete-suggestions strong { font-weight: normal; color: #4095DC; }
+
+
+.set_char_product_value {
+    position: absolute;
+    padding: 10px 20px;
+    border: 1px solid #4095DC;
+    background-color: #d6ecff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+
+.p-check    {
+    font-size: 14px;
+    color: #5a5a5a;
+    vertical-align: top;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0 8px 5px 8px;
+}
+
+.p-check>input[type="checkbox"], .p-check>input[type="radio"] {
+    vertical-align: middle;
+    margin-bottom: 3px;
+    display: none;
+}
+.p-check>* {
+    vertical-align: middle;
+}
+.p-check>span {
+    vertical-align: bottom;
+}
+.p-check>input[type="checkbox"]+em, .p-check>input[type="radio"]+em {
+    background: url(/images/sys/admin/sprite.png) no-repeat  -94px -13px;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: top;
+    margin-top: 3px;
+}
+.p-check>input[type="radio"]+em {
+    background-position: -12px -12px;
+    width: 14px;
+    height: 14px;
+}
+.p-check>input[type="checkbox"]:checked+em {
+    background-position: -114px -13px;
+}
+
+.p-check>input[type="radio"]:checked+em {
+    background-position: -48px -12px;
+}
+.p-check>input[type="checkbox"]+label, .p-check>input[type="radio"]+label {
+    display: inline-block;
+    vertical-align: top;
+}
+.p-check:hover>input[type="checkbox"]+em {
+    background-position:  -134px -13px;
+}
+.p-check:hover>input[type="radio"]+em {
+    background-position:-30px -12px;
+}
+.p-check:hover>input[type="checkbox"]:checked+em {
+    background-position: -154px -13px;
+}
+.p-check:hover>input[type="radio"]:checked+em {
+    background-position: -66px -12px;
+}
+button.search {
+    background: url(/images/sys/admin/sprite.png) -12px -35px no-repeat;
+    width: 35px;
+    font-size: 0;
+    height: 28px;
+    vertical-align: top;
+}
+button.search:hover {
+    background-position: -53px -35px;
+}
+button.search:active {
+    background-position: -94px -35px;
+}
+.navigation select, .navigation input[type="text"] {
+    padding: 6px;
+    vertical-align: middle;
+}
+.navigation {
+    background-color: #f2f0f0;
+    border-bottom: 2px solid #3183c2;
+    font-size: 0;
+    color: #5a5a5a;
+    margin-bottom: 10px;
+}
+.navigation .right-line:first-child {
+    border-left: 0;
+}
+.navigation .right-line:last-child {
+    border-right: 0;
+}
+.navigation .right-line>span {
+    vertical-align: middle;
+    display: inline-block;
+    padding-top: 3px;
+}
+.navigation .right-line {
+    padding: 10px 15px;
+    padding-bottom: 5px;
+    height: 35px;
+    float: left;
+    border-right: 1px solid #b5b5b5;
+    border-left: 1px solid #ffffff;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+.navigation .p-check {
+    font-size: 13px;
+}
+
+.small-navigation {
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+.small-navigation select, .small-navigation input[type="text"] {
+    padding: 4px;
+    vertical-align: middle;
+}
+.small-navigation button{
+    vertical-align: middle;
+}
+.small-navigation>div {
+    display: inline-block;
+    margin-right: 50px;
+}
+
+.small-navigation>div>span, .small-navigation>div>a {
+    vertical-align: middle;
+    font-size: 16px;
+    color: black;
+}
+
+.small-navigation img {
+    vertical-align: middle;
+    margin-right: 7px;
+}
+
+#characteristic_product input:checked+label {
+    color: #2884cb
+}
+
+.buy_market {
+    margin-top: 5px;
+    background-color: #cde4fb;
+    border: 1px solid #3399ff;
+    padding: 5px 10px;
+    font-size: 12px;
+    color: black;
+}
+.buy_market h1 {
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 0px;
+    margin-bottom: 3px;
+}
+.buy_market span {
+    font-weight: bold;
+}
+
+.block .table tbody.order_shop_2  a, .block-page  .table tbody.order_shop_2  a, h1+a {
+    color: #04b200;
+}
+.block .table tbody.order_shop_3  a, .block-page  .table tbody.order_shop_3  a, h1+a {
+    color: #e000c8;
+}
+
+#products_sort {
+    /*    border-top: 1px solid #e5e5e5;
+        border-right: 1px solid #e5e5e5;*/
+}
+.product_block {
+    float: left;
+    border: 1px solid transparent;
+    border-collapse: collapse;
+    width: 170px;
+    text-align: center;
+    cursor: move;
+    background-color: white;
+}
+.product_block>div {
+    padding: 10px 10px;
+    height: 230px;
+    border: 1px solid #f5f5f5;
+}
+.product_block>div:hover {
+    border: 1px solid #cccccc;
+}
+.product_img {
+    border: 1px solid #f5f5f5;
+}
+.product_img img {
+    max-width: 130px;
+    height: 130px;
+}
+.product_name {
+    height: 70px;
+    display: table-cell;
+    vertical-align: middle;
+    width: 210px;
+    font-size: 13px;
+}
+.product_article {
+    font-size: 11px;
+    color: gray;
+}
+
+.nav_buttons {
+    margin: 10px 0;
+    text-align: right;
+}
+.nav_buttons>a {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 1px solid #e5e5e5;
+    background-color: #f5f5f5;
+    color: black;
+}
+.nav_buttons>a:hover, .nav_buttons>a.active {
+    background-color: #4b9ede;
+    color: white;
+    border: 1px solid #2778b7;
+    text-decoration: none;
+}
+

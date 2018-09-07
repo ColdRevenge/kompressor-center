@@ -1,0 +1,339 @@
+.del-basket {
+    background-position: -31px -400px;
+	width: 22px;
+	height: 22px;
+}
+.del-basket:hover {
+    background-position: -63px -400px;
+}
+.del-basket:active {
+    background-position: -95px -400px;
+}
+#error_delivery {
+    /*display: none;*/
+    width: 200px;
+    background-color: #f94208;
+    color: white;
+    display: none;
+    margin-left: 320px;
+    position: absolute;
+    padding: 10px 20px;
+    font-size: 17px;
+}
+
+
+.basket-notice {
+    background-color: #fffcfa;
+    border: 1px solid #f5e5d2;
+    text-align: left;
+    margin: auto;
+    width: 600px;
+    padding: 5px 15px 15px 15px;
+}
+.basket-notice .notice {
+    text-align: center;
+    margin-bottom: 5px;
+}
+.basket-notice .notice a {
+    font-weight: bold;
+}
+.free_delivery {
+    font-size: 15px;
+    margin: 15px 0 0px 0;
+    color: gray;
+    text-align: center;
+}
+.free_delivery b {
+    font-weight: bold;
+    color: red;
+    vertical-align: top;
+}
+.less {
+    background: url(/images/fronted/sprite.png) no-repeat -31px -277px;
+	width: 30px;
+	height: 30px;
+    display: inline-block;
+    font-size: 0;
+    text-decoration: none;
+    vertical-align: top;
+}
+.less:hover {
+    background-position: -70px -277px;
+}
+.less:active {
+    background-position: -110px -277px;
+}
+
+.more {
+    background: url(/images/fronted/sprite.png) no-repeat -31px -313px;
+	width: 30px;
+	height: 30px;
+    display: inline-block;
+    font-size: 0;
+    text-decoration: none;
+    vertical-align: top;
+}
+.more:hover {
+    background-position: -70px -313px;
+}
+.more:active {
+    background-position: -110px -313px;
+}
+
+#order_form {
+    display: none;
+}
+
+#order_button {
+    margin-top: 20px;
+    text-align: center;
+}
+#order_button button {
+    background-position: -23px -441px;
+	width: 137px;
+	height: 27px;
+}
+#order_button button:hover {
+    background-position: -170px -441px;
+}
+#order_button button:active {
+    background-position: -317px -441px;
+}
+
+#basket_table label {
+    display: block;
+}
+
+
+
+body .basket-table {
+    border: 1px solid #CCCCCC;
+}
+
+body .basket-table {
+    margin: 3px auto 7px auto; 
+    font: 15px Arial,Helvetica,sans-serif;;
+    color:#6b6b6b;
+    border-collapse: collapse;
+    border: 0;
+    padding: 0;
+}
+
+body .basket-table td img {
+    border: 1px solid #C7CCDF;
+    vertical-align: middle;
+}
+body .basket-table td img:hover {
+    opacity: 0.8;
+}
+body .basket-table td a {
+    text-decoration: none;
+    color: #171717;
+}
+body .basket-table td a:hover {
+    text-decoration: underline;
+}
+body .basket-table td {
+    padding: 5px 5px;
+    margin: 0;
+    text-align: center;
+    font-size: 14px;
+    vertical-align: middle;
+}
+body .basket-table tr:nth-child(odd) td   {
+    background-color: #C4D4EE;
+}
+body .basket-table tr:nth-child(even) td  {
+    background-color: #F5F5F5;
+}
+body .basket-table tr:nth-child(even) td:nth-child(even)   {
+    background-color: #F8F8F8;
+}
+body .basket-table tr:nth-child(odd) td:nth-child(even)   {
+    background-color: #C4D4EE;
+}
+body .basket-table tr:first-child td:nth-child(even), body .basket-table tr:first-child td {
+    background-color: #102983;
+    color: white;
+    font:  16px Arial;
+}
+
+body .basket-table tbody:last-child td:nth-child(even), body .basket-table tbody:last-child td {
+    /*background-color: white;*/
+    padding-bottom: 10px;
+    color:black;
+}
+body .basket-table tbody:first-child tr:last-child td:first-child {
+    /*    border-radius: 0 0 0 10px;*/
+}
+body .basket-table tbody:first-child tr:last-child td:last-child {
+    /*    border-radius: 0 0 10px 0 ;*/
+}
+
+
+
+#basket-block {
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: right;
+    white-space: nowrap;
+}
+#basket-block > a {
+    vertical-align: top;
+    text-align: left;
+    display: inline-block;
+    border-radius: 2px 2px 5px 5px;
+    color: #fff;
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+    text-decoration: none;
+    opacity: .9;
+    margin-left: 2px;
+    font: 14px "Open Sans", Arial, sans-serif;
+    background-color: #33a5e4;
+    white-space: nowrap;
+    padding: 10px 5px;
+    font-size: 11px;
+    position: relative;
+    min-width: 70px;
+    text-align: center;
+}
+#basket-block img {
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+    height: 31px;
+}
+#basket-block > a:hover {
+    color: #fff;
+    opacity: 1;
+    box-shadow: 0 0 30px #ccc;
+}
+#basket-img {
+    margin: 7px 0 0 10px;
+    display: inline-block;
+    vertical-align: top;
+    opacity: 1 !important;
+}
+.basket-counter {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    background-color: #2f387f;
+    font-size: 14px;
+    padding: 0px 5px;
+    border-radius: 100%;
+}
+
+body #basket_detailed .order-block td td {
+    font-size: 15px;
+    text-align: left;
+    padding: 4px;
+}
+body #basket_detailed .order-block {
+
+}
+body #basket_detailed .order-block>tr>td {
+    background-color: #F7F7F7;
+    width: 100%;
+    padding: 20px;
+    margin: 10px 0;
+    border-bottom: 20px solid white;
+}
+body #basket_detailed .order-block h2 {
+    margin-top: 0;
+    padding-top: 0;
+    font-size: 20px;
+    line-height: 1em;
+    text-align: left;
+    padding-bottom: 12px;
+}
+.delivery_radio {
+    display: inline-block;
+    padding-top: 5px;
+    vertical-align: top;
+}
+.delivery_icon {
+    display: inline-block;
+    vertical-align: top;
+}
+.delivery_desc {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 10px;
+    color: black;
+    font-size: 19px;
+    width: 500px;
+}
+.delivery_desc div {
+    font-size: 13px;
+    color: gray;
+}
+.delivery_desc .delivery_date {
+    font-size: 13px;
+}
+.delivery_child {
+    padding-left: 60px;
+    display: none;
+}
+.delivery_child .delivery_desc {
+    margin-left: 5px;
+    width: 560px;
+}
+
+.delivery_service {
+    display: none;
+}
+ #basket_table  .delivery_child .check-style input[type="radio"]+span {
+  margin-top: 8px;
+}
+
+
+body #method_payments {
+    text-align: left;
+}
+body #method_payments label:hover, .label-hover {
+    opacity: 0.8;
+}
+body #method_payments label * {
+    vertical-align: middle;
+    display: table-cell;
+    text-align: left; 
+    cursor: pointer;
+    font-size: 13px;
+}
+body #method_payments label input {
+    display: none;
+}
+body #method_payments label img { 
+    margin-right: 10px;
+}
+body #method_payments label {
+    vertical-align: middle;
+    width: 650px;
+    display: inline-block; 
+
+}
+body #method_payments label div {
+    width: 470px
+}
+body #method_payments label div b {
+    font-size: 16px;
+}
+body #method_payments label div * {
+    display: block;
+}
+
+#coupon_result {
+    font-size: 0;
+}
+
+#coupon_style {
+    color: red;
+    font-size:  24px;
+}
+#coupon_style span {
+    font-size: 21px;
+}

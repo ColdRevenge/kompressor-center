@@ -1,0 +1,54 @@
+{if $not_sort == '' && $not_sort != 1 &&  $count_products > 0 && $smarty.get.not_detailed_catalog != 1}
+    <div class="navigation">
+        <div class="sorting">
+            <span>Сортировать по: &nbsp;</span>
+
+            {if ! $setting->hide_prices}
+                <div class="sorting_border">
+                    <a href="javascript:void(0)" {if $sort_method == 'price'}class="active"{/if} onclick="AjaxRequestInd('left_box', '{$url}{if $smarty.get.is_category_brand_id}{$catalog_dir}/brand/category/{$pseudo_dir}/{$select_page+1}/{elseif $is_selection_find == 1}{$catalog_dir}/find-selection/?params={$smarty.post|serialize|replace:'"':'@@@@'|urldecode}&sort=price&page={$select_page}{elseif $is_brand == 1}{$catalog_dir}/brand/{$param_tpl.brand}/{$select_page+1}/{$catalog->id|default:0}/{else}{$catalog_dir}/id/{$catalog->id|default:0}/{/if}?sort=price&{if $char_adress}char_adress={$char_adress|urldecode}&{/if}page={$select_page}'{if $sort_method == 'price'} + '&order=' + $('#sorting_sort').val(){/if}, '#indicator_catalog');">
+                    цене
+                    </a> 
+                    {if $sort_method == 'price'}
+                        <img src="{if $sort_order == 'desc'}{$sys_images_url}arrow-desc.png{else $sort_order == 'asc'}{$sys_images_url}arrow-asc.png{/if}" alt="" onclick="AjaxRequestInd('left_box', '{$url}{if $smarty.get.is_category_brand_id}{$catalog_dir}/brand/category/{$pseudo_dir}/{$select_page+1}/{elseif $is_selection_find == 1}{$catalog_dir}/find-selection/?params={$smarty.post|serialize|replace:'"':'@@@@'|urldecode}&sort=' + $('#sorting_name').val() + '&order=' + $('#sorting_sort').val() + '&page={$select_page}{elseif $is_brand == 1}{$catalog_dir}/brand/{$param_tpl.brand}/{$select_page+1}/{$catalog->id|default:0}/{else}{$catalog_dir}/id/{$catalog->id|default:0}/{/if}?sort=' + $('#sorting_name').val() + '&order=' + $('#sorting_sort').val() + '&{if $char_adress}char_adress={$char_adress|urldecode}&{/if}page={$select_page}', '#indicator_catalog');" />
+                    {/if}
+                </div>
+            {/if}
+
+            <div class="sorting_border">
+                <a href="javascript:void(0)" {if $sort_method == 'name'}class="active"{/if} onclick="AjaxRequestInd('left_box', '{$url}{if $smarty.get.is_category_brand_id}{$catalog_dir}/brand/category/{$pseudo_dir}/{$select_page+1}/{elseif $is_selection_find == 1}{$catalog_dir}/find-selection/?params={$smarty.post|serialize|replace:'"':'@@@@'|urldecode}&sort=name&page={$select_page}{elseif $is_brand == 1}{$catalog_dir}/brand/{$param_tpl.brand}/{$select_page+1}/{$catalog->id|default:0}/{else}{$catalog_dir}/id/{$catalog->id|default:0}/{/if}?sort=name&{if $char_adress}char_adress={$char_adress|urldecode}&{/if}page={$select_page}'{if $sort_method == 'name'} + '&order=' + $('#sorting_sort').val(){/if}, '#indicator_catalog');">названию</a> 
+                {if $sort_method == 'name'}
+                    <img src="{if $sort_order == 'desc'}{$sys_images_url}arrow-desc.png{else $sort_order == 'asc'}{$sys_images_url}arrow-asc.png{/if}" alt="" onclick="AjaxRequestInd('left_box', '{$url}{if $smarty.get.is_category_brand_id}{$catalog_dir}/brand/category/{$pseudo_dir}/{$select_page+1}/{elseif $is_selection_find == 1}{$catalog_dir}/find-selection/?params={$smarty.post|serialize|replace:'"':'@@@@'|urldecode}&sort=' + $('#sorting_name').val() + '&order=' + $('#sorting_sort').val() + '&page={$select_page}{elseif $is_brand == 1}{$catalog_dir}/brand/{$param_tpl.brand}/{$select_page+1}/{$catalog->id|default:0}/{else}{$catalog_dir}/id/{$catalog->id|default:0}/{/if}?sort=' + $('#sorting_name').val() + '&order=' + $('#sorting_sort').val() + '&{if $char_adress}char_adress={$char_adress|urldecode}&{/if}page={$select_page}', '#indicator_catalog');" />
+                {/if}
+            </div><div class="sorting_border" style="border: 0"><a href="javascript:void(0)" {if $sort_method == 'order'}class="active"{/if} onclick="AjaxRequestInd('left_box', '{$url}{if $smarty.get.is_category_brand_id}{$catalog_dir}/brand/category/{$pseudo_dir}/{$select_page+1}/{elseif $is_selection_find == 1}{$catalog_dir}/find-selection/?params={$smarty.post|serialize|replace:'"':'@@@@'|urldecode}&sort=order&page={$select_page}{elseif $is_brand == 1}{$catalog_dir}/brand/{$param_tpl.brand}/{$select_page+1}/{$catalog->id|default:0}/{else}{$catalog_dir}/id/{$catalog->id|default:0}/{/if}?sort=order&{if $char_adress}char_adress={$char_adress|urldecode}&{/if}page={$select_page}'{if $sort_method == 'order'} + '&order=' + $('#sorting_sort').val(){/if}, '#indicator_catalog');">популярности</a> 
+                {if $sort_method == 'order'}
+                    <img src="{if $sort_order == 'desc'}{$sys_images_url}arrow-desc.png{else $sort_order == 'asc'}{$sys_images_url}arrow-asc.png{/if}" alt="" onclick="AjaxRequestInd('left_box', '{$url}{if $smarty.get.is_category_brand_id}{$catalog_dir}/brand/category/{$pseudo_dir}/{$select_page+1}/{elseif $is_selection_find == 1}{$catalog_dir}/find-selection/?params={$smarty.post|serialize|replace:'"':'@@@@'|urldecode}&sort=' + $('#sorting_name').val() + '&order=' + $('#sorting_sort').val() + '&page={$select_page}{elseif $is_brand == 1}{$catalog_dir}/brand/{$param_tpl.brand}/{$select_page+1}/{$catalog->id|default:0}/{else}{$catalog_dir}/id/{$catalog->id|default:0}/{/if}?sort=' + $('#sorting_name').val() + '&order=' + $('#sorting_sort').val() + '&{if $char_adress}char_adress={$char_adress|urldecode}&{/if}page={$select_page}', '#indicator_catalog');" />
+                {/if}</div>
+            <input type="hidden" value="{if $sort_method == 'price'}price{elseif $sort_method == 'name'}name{elseif $sort_method == 'order'}order{/if}" id="sorting_name" />
+            <input type="hidden" value="{if $sort_order == 'asc'}desc{else $sort_order == 'asc'}asc{/if}" id="sorting_sort" />
+        </div>
+
+        <div class="pages">
+            {if $count_products > 1}
+                <div id="sorting_pages">
+                    <span>Страница </span>&nbsp;&nbsp;
+                    {include file="navigation_pages.tpl"}
+
+                </div>
+            {/if}
+
+            <div class="sorting_border">
+                <span>Всего товаров: <strong>{$count_all_products}</strong></span>
+            </div><div class="sorting_border"><span>Показать по:</span>&nbsp;
+                <a href="javascript:void(0)" {if $smarty.session.count_product == 48}class="active"{/if} onclick="AjaxRequestInd('left_box', '{$url}{if $smarty.get.is_category_brand_id}{$catalog_dir}/brand/category/{$pseudo_dir}/{$select_page+1}/?{elseif $is_selection_find == 1}{$catalog_dir}/find-selection/?params={$smarty.post|serialize|replace:'"':'@@@@'|urldecode}&set_count=48&{elseif $is_brand == 1}{$catalog_dir}/brand/{$param_tpl.brand}/{$select_page+1}/{$catalog->id|default:0}/?{else}{$catalog_dir}/id/{$catalog->id|default:0}/?{/if}{if $char_adress}char_adress={$char_adress|urldecode}&{/if}set_count=48', '#indicator_catalog');">48</a>&nbsp;&nbsp;
+                <a href="javascript:void(0)" {if $smarty.session.count_product == 72}class="active"{/if} onclick="AjaxRequestInd('left_box', '{$url}{if $smarty.get.is_category_brand_id}{$catalog_dir}/brand/category/{$pseudo_dir}/{$select_page+1}/?{elseif $is_selection_find == 1}{$catalog_dir}/find-selection/?params={$smarty.post|serialize|replace:'"':'@@@@'|urldecode}&set_count=72&{elseif $is_brand == 1}{$catalog_dir}/brand/{$param_tpl.brand}/{$select_page+1}/{$catalog->id|default:0}/?{else}{$catalog_dir}/id/{$catalog->id|default:0}/?{/if}{if $char_adress}char_adress={$char_adress|urldecode}&{/if}set_count=72', '#indicator_catalog');">72</a>&nbsp;&nbsp;
+                <a href="javascript:void(0)" {if $smarty.session.count_product == 124}class="active"{/if} onclick="AjaxRequestInd('left_box', '{$url}{if $smarty.get.is_category_brand_id}{$catalog_dir}/brand/category/{$pseudo_dir}/{$select_page+1}/?{elseif $is_selection_find == 1}{$catalog_dir}/find-selection/?params={$smarty.post|serialize|replace:'"':'@@@@'|urldecode}&set_count=124&{elseif $is_brand == 1}{$catalog_dir}/brand/{$param_tpl.brand}/{$select_page+1}/{$catalog->id|default:0}/?{else}{$catalog_dir}/id/{$catalog->id|default:0}/?{/if}{if $char_adress}char_adress={$char_adress|urldecode}&{/if}set_count=124', '#indicator_catalog');">124</a>&nbsp;&nbsp;
+                <a href="javascript:void(0)" {if $smarty.session.count_product == 1000000}class="active"{/if} onclick="AjaxRequestInd('left_box', '{$url}{if $smarty.get.is_category_brand_id}{$catalog_dir}/brand/category/{$pseudo_dir}/{$select_page+1}/?{elseif $is_selection_find == 1}{$catalog_dir}/find-selection/?params={$smarty.post|serialize|replace:'"':'@@@@'|urldecode}&set_count=1000000&{elseif $is_brand == 1}{$catalog_dir}/brand/{$param_tpl.brand}/{$select_page+1}/{$catalog->id|default:0}/?{else}{$catalog_dir}/id/{$catalog->id|default:0}/?{/if}{if $char_adress}char_adress={$char_adress|urldecode}&{/if}set_count=1000000', '#indicator_catalog');">все</a>&nbsp;&nbsp;
+            </div><div class="sorting_border" id="catalog_out_product" style="border: 0; vertical-align: middle">&nbsp;
+                <div id="catalog_row"{if $template_products_catalog == 'getProduct.tpl' || $template_products_catalog == 'getProductLady.tpl'} class="active"{/if} onclick="AjaxRequestInd('left_box', '{$url}{if $smarty.get.is_category_brand_id}{$catalog_dir}/brand/category/{$pseudo_dir}/{$select_page+1}/{elseif $is_selection_find == 1}{$catalog_dir}/find-selection/?params={$smarty.post|serialize|replace:'"':'@@@@'|urldecode}&template_products_catalog=1&page={$select_page}{elseif $is_brand == 1}{$catalog_dir}/brand/{$param_tpl.brand}/{$select_page+1}/{$catalog->id|default:0}/{else}{$catalog_dir}/id/{$catalog->id|default:0}/{/if}?template_products_catalog=1&{if $char_adress}char_adress={$char_adress|urldecode}&{/if}page={$select_page}', '#indicator_catalog');">&nbsp;</div><div id="catalog_list"{if $template_products_catalog == 'getProductList.tpl' || $template_products_catalog == 'getProductListLady.tpl'} class="active"{/if} onclick="AjaxRequestInd('left_box', '{$url}{if $smarty.get.is_category_brand_id}{$catalog_dir}/brand/category/{$pseudo_dir}/{$select_page+1}/{elseif $is_selection_find == 1}{$catalog_dir}/find-selection/?params={$smarty.post|serialize|replace:'"':'@@@@'|urldecode}&template_products_catalog=2&page={$select_page}{elseif $is_brand == 1}{$catalog_dir}/brand/{$param_tpl.brand}/{$select_page+1}/{$catalog->id|default:0}/{else}{$catalog_dir}/id/{$catalog->id|default:0}/{/if}?template_products_catalog=2&{if $char_adress}char_adress={$char_adress|urldecode}&{/if}page={$select_page}', '#indicator_catalog');">&nbsp;</div>
+            </div>
+        </div>
+
+
+        <div class="clear">&nbsp;</div>
+    </div>
+{/if}

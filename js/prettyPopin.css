@@ -1,0 +1,45 @@
+/* ------------------------------------------------------------------------
+	Popin
+------------------------------------------------------------------------- */
+
+	#overlay {
+		background: #000;
+		position: absolute; top: 0; left: 0;
+		z-index: 10000;
+		width: 100%;
+	}
+
+	.prettyPopin {
+		display: none;
+		overflow: hidden;
+		position: absolute; z-index: 11000;
+		top: 50%; left: 50%;
+	}
+	
+		.prettyPopin a#b_close {
+			display: none;
+			position: absolute; 
+			top: 4px; right: 18px;
+			width: 34px; height: 34px;
+                        z-index: 2;
+			text-indent: -10000px;
+			background: url(/images/prettyPopin/close.png) bottom left no-repeat;
+		}
+	
+		.prettyPopin .prettyContent {
+			position: relative;
+			width: 100%; height: 100%;
+			font-size: 1.2em;
+			background: url(/images/prettyPopin/basket.png) top left no-repeat;
+		}
+		
+			.prettyPopin .prettyContent .prettyContent-container {
+				display: none;
+				padding: 20px 15px 15px 15px;
+			}
+		
+			.prettyPopin .prettyContent .loader {
+				position: absolute;
+				top: 50%; left: 50%;
+				margin: -14px 0 0 -14px;
+			}

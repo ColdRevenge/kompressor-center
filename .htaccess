@@ -1,0 +1,13 @@
+Options -Indexes 
+RewriteEngine on
+
+ 
+RewriteCond %{HTTP_HOST} ^www.domains.loc$ [NC]
+RewriteRule ^(.*)$ http://domains.loc/$1 [R=301,L]
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !-d
+
+
+
+RewriteRule ^(.*)$ /index.php/$1
+

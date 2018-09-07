@@ -1,0 +1,39 @@
+$(document).ready(function(){
+	var q = $(".container");
+	q.wtListRotator({
+     screen_width:577,
+     screen_height:243,
+     item_width:219,
+     item_height:81,
+     item_display:3,
+     list_align:"right",
+     scroll_type:"mouse_move",
+     auto_start:true,
+     delay:7000,
+     transition:"block.fade",
+     transition_speed:800,
+     display_playbutton:false,
+     display_number:false,
+     display_timer:false,
+     display_arrow:true,
+     display_thumb:true,
+     display_scrollbar:true,
+     pause_mouseover:false,
+     cpanel_mouseover:false,
+     text_mouseover:false,
+     text_effect:"fade",
+     text_sync:true,
+     cpanel_align:"TR",
+     timer_align:"bottom",
+     move_one:false,
+     auto_adjust:true,
+     shuffle:false,
+     block_size:75,
+     vert_size:50,
+     horz_size:50,
+     block_delay:40,
+     vstripe_delay:100,
+     hstripe_delay:200
+   });
+   return true;
+ });

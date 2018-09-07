@@ -1,0 +1,106 @@
+.carousel  {
+   width: 957px; /* ширина всего блока */
+   margin: auto;
+    border: 1px solid #e0e0e0;
+    padding: 23px 20px 15px 20px;
+    margin-bottom: 20px;
+    margin-top: 15px;
+}
+#banner {
+    width: 763px;
+    padding: 6px;
+    position: relative;
+}
+#banner-wrapper {
+    padding-bottom: 8px;
+    width: 777px;
+    margin-bottom: 7px;
+    background: url(/images/fronted/banner-shadow.png) center bottom no-repeat;
+}
+
+.carousel-wrapper {
+   width: 910px; /* ширина области карусели */
+   overflow: hidden; /* скрываем содержимое, выходящее за рамки основной области */
+   margin:0px;
+   padding:0px;
+}
+.carousel-items {
+   width: 10000px; /* устанавливаем большую ширину для набора элементов */
+   position: relative; /* позиционируем блок относительно основной области карусели */
+}
+.carousel-block {
+   float: left; /* выстраиваем все элементы карусели в ряд */
+   width: 120px; /* задаём ширину каждого элемента */
+   padding: 0px 5px 0 15px; /* делаем оступы, чтобы элементы не сливались */
+}
+
+/*********** BUTTONS ***********/
+.carousel-button-left a, .carousel-button-right a{
+   width: 20px; 
+   height: 28px; 
+   position: relative;
+   cursor: pointer; 
+   top: 8px;
+   text-decoration:none;
+   vertical-align: middle;
+}
+.carousel-button-left a{
+   float: left; 
+   background: url(/images/fronted/arrow-left.png) 0 0 no-repeat; 
+}
+.carousel-button-right a{
+   float: right;
+   background: url(/images/fronted/arrow-right.png) 0 0 no-repeat; 
+}
+.carousel-button-left a:hover, .carousel-button-right a:hover {
+    text-decoration: none;
+}
+
+
+
+
+.carousel-photos  {
+   width: 340px; /* ширина всего блока */
+   margin: auto;
+    padding: 23px 0px 15px 0px;
+    margin-bottom: 20px;
+    margin-top: 15px;
+}
+
+.carousel-photos-wrapper {
+   width: 300px; /* ширина области карусели */
+   overflow: hidden; /* скрываем содержимое, выходящее за рамки основной области */
+   margin:0px;
+   padding:0px;
+}
+.carousel-photos-items {
+   width: 10000px; /* устанавливаем большую ширину для набора элементов */
+   position: relative; /* позиционируем блок относительно основной области карусели */
+}
+.small-carousel-block {
+   float: left; /* выстраиваем все элементы карусели в ряд */
+   width: 80px; /* задаём ширину каждого элемента */
+   padding: 0px 5px 0 14px; /* делаем оступы, чтобы элементы не сливались */
+}
+
+/*********** BUTTONS ***********/
+.carousel-photos-button-left a, .carousel-photos-button-right a{
+   width: 20px; 
+   height: 28px; 
+   position: relative;
+   cursor: pointer; 
+   top: 31px;
+   text-decoration:none;
+   vertical-align: middle;
+}
+.carousel-photos-button-left a{
+   float: left; 
+   background: url(/images/fronted/arrow-left.png) 0 0 no-repeat; 
+}
+.carousel-photos-button-right a{
+   float: right;
+   background: url(/images/fronted/arrow-right.png) 0 0 no-repeat; 
+}
+.carousel-photos-button-left a:hover, .carousel-photos-button-right a:hover {
+    text-decoration: none;
+}

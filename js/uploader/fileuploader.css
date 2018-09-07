@@ -1,0 +1,95 @@
+.qq-uploader { position:relative; width: 100%; min-height:80px; border:2px dashed #eee; border-radius:6px; margin-bottom:20px;}
+
+.qq-upload-button {
+    display: inline-block;
+    background-color: transparent;
+    border: 0px;
+    margin: 0px;
+    margin-top: 25px;
+    margin-right: 22px;
+    padding: 5px 10px;
+    padding: 7px 17px 7px 17px;
+    cursor: pointer; 
+    font: 14px Arial,Helvetica,sans-serif;;
+    text-transform: uppercase;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAAeCAIAAACJwFiTAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NTc3MiwgMjAxNC8wMS8xMy0xOTo0NDowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjQ3RDQyMzY2QUJCRDExRTRBMDE0QTk1ODQ2NUZDRkE0IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjQ3RDQyMzY3QUJCRDExRTRBMDE0QTk1ODQ2NUZDRkE0Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NDdENDIzNjRBQkJEMTFFNEEwMTRBOTU4NDY1RkNGQTQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NDdENDIzNjVBQkJEMTFFNEEwMTRBOTU4NDY1RkNGQTQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz46PJdiAAAAKElEQVR42mJkmPWKgYGBheH/fzDFAKFAJEIQTY4qFANVtTMgBAECDADsNTTHJUAePQAAAABJRU5ErkJggg==") repeat-x 0 0 #0082cf;
+    color: white;
+    position: relative;
+    z-index: 4;
+}
+.qq-upload-button-hover {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAAeCAIAAACJwFiTAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NTc3MiwgMjAxNC8wMS8xMy0xOTo0NDowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjRCOUMwRjAyQUJCRDExRTQ5MzMxOEY4NEE4RDg4RjZDIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjRCOUMwRjAzQUJCRDExRTQ5MzMxOEY4NEE4RDg4RjZDIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NEI5QzBGMDBBQkJEMTFFNDkzMzE4Rjg0QThEODhGNkMiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NEI5QzBGMDFBQkJEMTFFNDkzMzE4Rjg0QThEODhGNkMiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6XhtAbAAAANElEQVR42mJkmv2KgYGBheE/A5gC00wMDAy4BBFyhASJUAIXBNuAah+Uh08JqjuhPIAAAwCOZBXPNhzy3AAAAABJRU5ErkJggg==);
+}
+.qq-upload-button-focus {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAAeCAIAAACJwFiTAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NTc3MiwgMjAxNC8wMS8xMy0xOTo0NDowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjRGRjlBRDIwQUJCRDExRTQ5MUU1ODVGQUM3OUE2MzZCIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjRGRjlBRDIxQUJCRDExRTQ5MUU1ODVGQUM3OUE2MzZCIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NEZGOUFEMUVBQkJEMTFFNDkxRTU4NUZBQzc5QTYzNkIiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NEZGOUFEMUZBQkJEMTFFNDkxRTU4NUZBQzc5QTYzNkIiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz43vboDAAAAQklEQVR42pTMywkAIAwD0FRbR3U4d6wfagUFPXh6kIQQcgHAYJkkQw48jLwvQ5xhMMihC6B39806g9EcNbQOugADAH/pBulYFpT2AAAAAElFTkSuQmCC);
+}
+
+.qq-upload-drop-area {
+    position:absolute; top:0; left:0; width:100%; height:100%; min-height: 70px; z-index:2;
+    text-align:center;
+}
+.qq-upload-drop-area span {
+    display:block; position:absolute; top: 40px; width:100%; margin-top:-8px; font-size:16px;
+}
+.qq-upload-drop-area-active {background:#4095DC;color: white}
+.qq-upload-list {
+	margin: 0;
+        margin-top: 5px;
+	padding: 0;
+	list-style: none;
+}
+.qq-upload-list li {
+	margin: 0;
+	padding: 9px;
+	line-height: 15px;
+	font-size: 16px;
+        margin: 0px 2px 0px 2px;
+        border: 1px solid white;
+	background-color: #EAF2F9;
+}
+.qq-upload-file, .qq-upload-spinner, .qq-upload-size, .qq-upload-cancel, .qq-upload-failed-text, .qq-upload-finished {
+	margin-right: 12px;
+}
+.qq-upload-file {
+}
+.qq-upload-spinner {
+	display: inline-block;
+	background: url("/js/uploader/loading.gif");
+	width: 15px;
+	height: 15px;
+	vertical-align: text-bottom;
+}
+.qq-upload-finished {
+    display:none;
+    width:15px;
+    height:15px;
+    vertical-align:text-bottom;
+}
+.qq-upload-size, .qq-upload-cancel {
+	font-size: 12px;
+	font-weight: normal;
+}
+.qq-upload-failed-text {
+	display: none;
+}
+.qq-upload-failed-icon {
+    display:none;
+    width:15px;
+    height:15px;
+    vertical-align:text-bottom;
+}
+.qq-upload-fail .qq-upload-failed-text {
+	display: inline;
+}
+.qq-upload-list li.qq-upload-success {
+	background-color: #57a8ea;
+	color: #FFFFFF;
+}
+.qq-upload-list li.qq-upload-fail {
+	background-color: #ff7070;
+	color: #FFFFFF;
+}
+
+#file-uploader {
+    margin-top: 20px;
+}

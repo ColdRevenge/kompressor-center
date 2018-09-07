@@ -1,0 +1,4 @@
+/home/lalipop/domains/lalipop.ru/private_html/modules/catalog/templates/catalog.tpl#!!!#
+/home/lalipop/domains/lalipop.ru/private_html/modules/basket/templates/basket.tpl#!!!#
+/home/lalipop/domains/lalipop.ru/private_html/modules/auth/templates/mini_auth.tpl#!!!#
+/home/lalipop/domains/lalipop.ru/private_html/templates/main.tpl#!!!#
